@@ -7,7 +7,7 @@ services:
     volumes:
       - .:/app
     ports:
-      - "8000:8000"
+      - "8000:8000" # DEFAULT PORT
     depends_on:
       - redis
       - postgres
@@ -22,7 +22,7 @@ services:
       - POSTGRES_USER=postgres_user
       - POSTGRES_PASSWORD=postgres_password
      ports:
-      - "54323:5432"
+      - "5432:5432" # DEFAULT PORT
 
  celery:
     build: .
